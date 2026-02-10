@@ -1,37 +1,63 @@
-// operations to perform
-// 1. Create a file
-// 2. Open a file
-// 3. Read data
-// 4. Write data
-// 5. Delete FIle
-// 6. Copy File
-
 #include <iostream>
-#include <fstream> // for file handling
-#include <cstdio>  // for delete (remove)
+#include <fstream>
+#include <cstdio>
+#include <string>
 
 using namespace std;
 
-// creating a file .. using ofstream
 int main()
 {
-    ofstream file("C:\\Users\\malet\\OneDrive\\Desktop\\test.txt");
+    // WRITE TO FILE
+    ofstream outFile("C:\\Users\\malet\\OneDrive\\Desktop\\test.txt");
 
-    // open a file.. use open()
-
-    if (!file)
+    if (!outFile)
     {
-        cout << "File not found";
-    }
-    else
-    {
-        cout << "File opened successfully";
+        cout << "File not found" << endl;
+        return 1;
     }
 
-    // Write data to a file ... Use << just like cout
-    file << "Name:Shivam" << endl;
-    file << "Age: 21" << endl;
-    file << "SalaryL 5000000" << endl;
+    outFile << "Name: Shivam" << endl;
+    outFile << "Age: 21" << endl;
+    outFile << "Salary: 5000000" << endl;
 
-    file.close();
+    outFile.close();
+
+    // READ FROM FILE
+    ifstream inFile("C:\\Users\\malet\\OneDrive\\Desktop\\test.txt");
+
+    string line;
+    while (getline(inFile, line))
+    {
+        cout << line << endl;
+    }
+
+    inFile.close();
+
+    // Delete a file ...Using remove() from <cstdio>
+
+    {
+        if (remove("data.txt") == 0)
+            cout << "File deleted successfully";
+        else
+            cout << "Error deleting file";
+    }
+
+    // Copy a file..Read from one file, write to another
+
+    {
+        ifstream source("source.txt");
+        ofstream destination("copy.txt");
+
+        string line;
+        while (getline(source, line))
+        {
+            destination << line << endl;
+        }
+
+        source.close();
+        destination.close();
+
+        cout << "File copied successfully";
+    }
+    return 0;
 }
