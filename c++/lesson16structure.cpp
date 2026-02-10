@@ -18,5 +18,6 @@ main()
 
     cout << E.name << endl
          << E.number << endl
-         << E.salary;
+         << E.salary << endl
+         << sizeof(Emp);
 }
