@@ -28,5 +28,10 @@ int main()
         cout << "File opened successfully";
     }
 
+    // Write data to a file ... Use << just like cout
+    file << "Name:Shivam" << endl;
+    file << "Age: 21" << endl;
+    file << "SalaryL 5000000" << endl;
+
     file.close();
 }
