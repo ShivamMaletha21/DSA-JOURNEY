@@ -17,5 +17,16 @@ int main()
 {
     ofstream file("C:\\Users\\malet\\OneDrive\\Desktop\\test.txt");
 
+    // open a file.. use open()
+
+    if (!file)
+    {
+        cout << "File not found";
+    }
+    else
+    {
+        cout << "File opened successfully";
+    }
+
     file.close();
 }
