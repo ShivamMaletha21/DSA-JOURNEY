@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 class A
 {
@@ -20,6 +19,5 @@ int main()
 
     A obj = A();
     obj.show();
-    getch();
     return 0;
 }
