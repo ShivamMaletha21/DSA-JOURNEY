@@ -3,7 +3,7 @@ using namespace std;
 
 class A
 {
-    int a, b;
+    int a, b; // private default
 
 public:
     A(int x, int y)
