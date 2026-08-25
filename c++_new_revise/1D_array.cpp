@@ -162,3 +162,26 @@ int main()
 
         return 0;
     }
+
+#include <iostream>
+    using namespace std;
+
+    int main()
+    {
+
+        int nums[5];
+
+        // Taking input
+        for (int i = 0; i < 5; i++)
+        {
+            cin >> nums[i];
+        }
+
+        // Printing the array
+        for (int i = 0; i < 5; i++)
+        {
+            cout << nums[i] << " ";
+        }
+
+        return 0;
+    }
