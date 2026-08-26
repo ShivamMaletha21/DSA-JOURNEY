@@ -1,26 +1,26 @@
 // basic structure
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main()
-// {
-//     cout << "I am learning c++";
-//     return 0;
-// }
+int main()
+{
+    cout << "I am learning c++";
+    return 0;
+}
 
 // // input / output
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main()
-// {
+int main()
+{
 
-//     int age;
-//     cout << "Enter your age: ";
-//     cin >> age;
-//     cout << "Your age is " << age << "\n";
-//     return 0;
-// }
+    int age;
+    cout << "Enter your age: ";
+    cin >> age;
+    cout << "Your age is " << age << "\n";
+    return 0;
+}
 
 // Data Type
 #include <iostream>

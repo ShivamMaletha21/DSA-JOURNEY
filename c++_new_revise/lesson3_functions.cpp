@@ -1,51 +1,53 @@
-// #include <iostream>
+#include <iostream>
 
-// int add(int a, int b)
-// {
-//     return a + b;
-// }
+int add(int a, int b)
+{
+    return a + b;
+}
 
-// int main()
-// {
-//     int result = add(10, 20);
+////////////////////////
 
-//     std::cout << result;
-//     return 0;
-// }
+int main()
+{
+    int result = add(10, 20);
+
+    std::cout << result;
+    return 0;
+}
 
 // call by value
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// void fun(int x)
-// {
-//     x = 100;
-//     cout << "the value of x is: " << x << "\n";
-// }
+void fun(int x)
+{
+    x = 100;
+    cout << "the value of x is: " << x << "\n";
+}
 
-// int main()
-// {
-//     int a = 10;
-//     fun(a);
+int main()
+{
+    int a = 10;
+    fun(a);
 
-//     cout << "the value of a is: " << a;
-// }
+    cout << "the value of a is: " << a;
+}
 
-// void change(string text)
-// {
-//     text = text + "Goodbye";
+void change(string text)
+{
+    text = text + "Goodbye";
 
-//     cout << text;
-// }
+    cout << text;
+}
 
-// int main()
-// {
-//     string message = "Hello";
+int main()
+{
+    string message = "Hello";
 
-//     change(message);
+    change(message);
 
-//     cout << message;
-// }
+    cout << message;
+}
 
 // Questions based on pass by values
 // Q1.Simple value passing
@@ -56,18 +58,18 @@
 
 #include <iostream>
 
-// void integ(int a)
-// {
-//     a = a + 90;
-//     std::cout << "the value of a is: " << a;
-// }
+void integ(int a)
+{
+    a = a + 90;
+    std::cout << "the value of a is: " << a;
+}
 
-// int main()
-// {
-//     int x = 10;
+int main()
+{
+    int x = 10;
 
-//     integ(x);
-// }
+    integ(x);
+}
 
 // Q2.Add a value
 //     Write a function that takes an integer by value and adds 50 to the parameter.Call the function with a variable containing 20.
@@ -75,18 +77,18 @@
 //     Question : What will be the output
 //     ?
 
-// void func(int x)
-// {
-//     x = x + 50;
-//     std::cout << "variable before the function call: " << x << "\n";
-// }
-// int main()
-// {
+void func(int x)
+{
+    x = x + 50;
+    std::cout << "variable before the function call: " << x << "\n";
+}
+int main()
+{
 
-//     int a = 20;
-//     func(a);
-//     std::cout << "variable after the functon call: " << a;
-// }
+    int a = 20;
+    func(a);
+    std::cout << "variable after the functon call: " << a;
+}
 
 // Q4.Understand the copy
 
@@ -99,17 +101,17 @@
 //     ? What is the value of x after the function finishes
 //     ?
 
-// int func(int a)
-// {
-//     a = a + 475;
-//     std::cout << "value of a: " << a;
-// }
-// int main()
-// {
-//     int x = 25;
+int func(int a)
+{
+    a = a + 475;
+    std::cout << "value of a: " << a;
+}
+int main()
+{
+    int x = 25;
 
-//     func(x);
-// }
+    func(x);
+}
 
 // Q14.Three - step modification
 
