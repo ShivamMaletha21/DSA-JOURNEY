@@ -8,7 +8,7 @@ public:
     // data members
     string name;
     int age;
-    int marks[4];
+    int marks[1];
 
     // member functions
     void display()
@@ -33,9 +33,6 @@ int main()
     s1.name = "Shivam";
     s1.age = 21;
     s1.marks[0] = 10;
-    s1.marks[1] = 20;
-    s1.marks[2] = 30;
-    s1.marks[3] = 40;
 
     s1.display();
 
