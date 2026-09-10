@@ -16,24 +16,30 @@ public:
     int singleNumber(vector<int> &nums)
     {
 
+        // outer loop
         for (int i = 0; i < nums.size(); i++)
         {
+
             int count = 0;
 
+            // innner loop
             for (int j = 0; j < nums.size(); j++)
             {
+
                 if (nums[i] == nums[j])
                 {
+
                     count++;
                 }
             }
-
+            // condition to check duplicates
             if (count == 1)
             {
                 return nums[i];
             }
         }
 
+        // if nothing happens return -1
         return -1;
     }
 };
@@ -44,13 +50,15 @@ class Solution
 public:
     int singleNumber(vector<int> &nums)
     {
-        int ans = 0;
 
-        for (int num : nums)
+        int result = 0;
+
+        for (int i = 0; i < nums.size(); i++)
         {
-            ans ^= num;
+
+            result = result ^ nums[i];
         }
 
-        return ans;
+        return result;
     }
 };
