@@ -268,28 +268,28 @@ using namespace std;
 
 // Concept: Copy constructor
 
-// class Student
-// {
-// public:
-//     string name;
-//     int marks;
+class Student
+{
+public:
+    string name;
+    int marks;
 
-//     Student(string name, int marks)
-//     {
-//         this->name = name;
-//         this->marks = marks;
-//     }
-//     Student(const Student &other)
-//     {
-//         name = other.name;
-//         marks = other.marks;
-//     }
-// };
+    Student(string name, int marks)
+    {
+        this->name = name;
+        this->marks = marks;
+    }
+    Student(const Student &other)
+    {
+        name = other.name;
+        marks = other.marks;
+    }
+};
 
-// int main()
-// {
-//     Student s1("shivam", 22);
-//     Student s2 = s1;
+int main()
+{
+    Student s1("shivam", 22);
+    Student s2 = s1;
 
-//     cout << s2.name;
-// }
+    cout << s2.name;
+}
