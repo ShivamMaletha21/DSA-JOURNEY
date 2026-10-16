@@ -41,5 +41,146 @@ CREATE TABLE employees (
 -- Q8 Display all tables in your currently selected database.
 SHOW TABLES;
 
+---------------------------------------------------------------------------------------------------------------------------------
+
+-- Level 2 — INSERT and SELECT
+-- Use the students table
 -- Q9 Create a database named SQL_Lab only if it does not already exist.
+
 CREATE DATABASE IF NOT EXISTS SQL_Lab;
+
+- Level 2 — INSERT and SELECT
+-- Use the students table
+
+CREATE DATABASE IF NOT EXISTS SQL_Practise;
+
+Use SQL_Practise;
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    age INT,
+    city VARCHAR(40),
+    course VARCHAR(30),
+    marks INT,
+    fees DECIMAL(8, 2),
+    email VARCHAR(100) UNIQUE
+);
+
+INSERT INTO
+    students (
+        student_id,
+        name,
+        age,
+        city,
+        course,
+        marks,
+        fees,
+        email
+    )
+VALUES (
+        1,
+        'Aman',
+        20,
+        'Delhi',
+        'BCA',
+        85,
+        45000,
+        'aman@example.com'
+    ),
+    (
+        2,
+        'Priya',
+        21,
+        'Dehradun',
+        'BCA',
+        92,
+        45000,
+        'priya@example.com'
+    ),
+    (
+        3,
+        'Rahul',
+        19,
+        'Delhi',
+        'BBA',
+        68,
+        40000,
+        'rahul@example.com'
+    ),
+    (
+        4,
+        'Neha',
+        22,
+        'Mumbai',
+        'BCA',
+        76,
+        45000,
+        'neha@example.com'
+    ),
+    (
+        5,
+        'Arjun',
+        20,
+        'Dehradun',
+        'BBA',
+        88,
+        40000,
+        'arjun@example.com'
+    ),
+    (
+        6,
+        'Sneha',
+        21,
+        'Jaipur',
+        'BCA',
+        59,
+        45000,
+        'sneha@example.com'
+    ),
+    (
+        7,
+        'Karan',
+        23,
+        'Mumbai',
+        'BBA',
+        73,
+        40000,
+        'karan@example.com'
+    ),
+    (
+        8,
+        'Meera',
+        19,
+        'Delhi',
+        'BCA',
+        95,
+        45000,
+        'meera@example.com'
+    ),
+    (
+        9,
+        'Rohit',
+        22,
+        'Jaipur',
+        'BBA',
+        81,
+        40000,
+        'rohit@example.com'
+    ),
+    (
+        10,
+        'Isha',
+        20,
+        'Dehradun',
+        'BCA',
+        64,
+        45000,
+        'isha@example.com'
+    );
+
+-- displays all columns and all rows from the students table
+SELECT * FROM STUDENTS;
+
+-- counts the total number of rows
+SELECT COUNT(*) FROM STUDENTS;
