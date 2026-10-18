@@ -508,3 +508,4 @@ CREATE TABLE person_details (
     address VARCHAR(100),
     FOREIGN KEY (person_id) REFERENCES persons (person_id)
 );
+
