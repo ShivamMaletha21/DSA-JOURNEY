@@ -104,3 +104,44 @@ COMMIT;
 
 SELECT * FROM STUDENTS2;
 -- HERE FIRST UPDATE WILL HAPPENS 2ND DOEST BCZ OF ROLLBACK
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+-- ON DELTE CASCADE
+CREATE DATABASE DB;
+
+USE DB;
+-- 1. Create the parent table
+CREATE TABLE Department (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+-- 2. Insert department records
+INSERT INTO Department VALUES (1, 'IT'), (2, 'HR');
+
+-- 3. Create the child table with ON DELETE CASCADE
+CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Department (dept_id) ON DELETE CASCADE
+);
+
+-- 4. Insert employee records
+INSERT INTO
+    Employees
+VALUES (101, 'Rahul', 1),
+    (102, 'Aman', 1),
+    (103, 'Priya', 2);
+
+-- 5. View employee records before deletion
+SELECT * FROM Employees;
+
+-- 6. Delete the IT department
+DELETE FROM Department WHERE dept_id = 1;
+
+-- 7. View records after deletion
+SELECT * FROM Department;
+
+SELECT * FROM Employees;
