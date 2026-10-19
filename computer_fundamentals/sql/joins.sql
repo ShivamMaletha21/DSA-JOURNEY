@@ -72,3 +72,23 @@ VALUES (101, 'Computer Science'),
 SELECT Students.student_id, Students.name, Students.dept_id, Departments.dept_name
 FROM Students
     LEFT JOIN Departments ON STUDENTS.dept_id = Departments.dept_id;
+
+-- cross join
+CREATE DATABASE IF NOT EXISTS CROSSJOIN_DB;
+
+USE CROSSJOIN_DB;
+
+-- create colors table
+CREATE TABLE Colors (color VARCHAR(30));
+
+-- Insert colors
+INSERT INTO Colors VALUES ('Red'), ('Blue');
+
+-- creta sizes table
+CREATE TABLE Sizes (size VARCHAR(30));
+
+-- insert sizes
+INSERT INTO Sizes VALUES ('Small'), ('Large');
+
+-- apply cross join
+SELECT Colors.color, Sizes.size FROM Colors CROSS JOIN Sizes;
