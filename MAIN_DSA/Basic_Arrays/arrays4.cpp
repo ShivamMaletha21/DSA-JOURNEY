@@ -25,3 +25,6 @@ public:
         return nums;
     }
 };
+
+console.log("just adding code to push , bcz of college work not able to write anything code but i revise dsa");
+console.log("i write this same code that's why there is no need to push same");

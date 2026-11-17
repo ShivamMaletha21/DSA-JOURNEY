@@ -15,7 +15,7 @@ public:
             // first assuming that every numbers is prime
             bool isPrime = true;
 
-            for (int j = 2; j < i; j++)
+            for (int j = 2; j * j <= i; j++)
             {
 
                 if (i % j == 0)
@@ -46,7 +46,7 @@ public:
             return 0;
         }
 
-        // Markno as pirmie initaly
+        // Mark no as prime  initaly
         vector<bool> isPrime(n, true);
 
         // 0 and 1 are not prime
