@@ -35,3 +35,25 @@ public:
         }
     }
 };
+
+// optimize solution
+class Solution
+{
+public:
+    void rotate(vector<int> &nums, int k)
+    {
+
+        int n = nums.size();
+
+        k = k % n; // remving unnecsary rotations
+
+        // reverse the entire array
+        reverse(nums.begin(), nums.end());
+
+        // reverse the starting elemnt
+        reverse(nums.begin(), nums.begin() + k);
+
+        // reverse the remaining last elemnts
+        reverse(nums.begin() + k, nums.end());
+    }
+};
